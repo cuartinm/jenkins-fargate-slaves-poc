@@ -5,8 +5,8 @@ pipeline {
         agent {
             ecs {
                 inheritFrom 'ecs-fargate-slaves'
-                cpu 2048
-                memory 4096
+                cpu 256
+                memory 512
                 image 'jenkinsci/jnlp-slave'
                 portMappings([[containerPort: 22, hostPort: 22, protocol: 'tcp'], [containerPort: 443, hostPort: 443, protocol: 'tcp']])
             }
