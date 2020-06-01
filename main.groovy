@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'standalone-app'
+                inheritFrom 'default'
                 cpu 256
                 memory 512
                 image 'jenkinsci/jnlp-slave'
