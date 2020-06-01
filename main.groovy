@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
         agent {
             ecs {
-                inheritFrom 'ecs-fargate-slaves'
+                inheritFrom 'standalone-app'
                 cpu 256
                 memory 512
                 image 'jenkinsci/jnlp-slave'
