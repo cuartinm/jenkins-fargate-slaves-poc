@@ -7,7 +7,7 @@ pipeline {
                 inheritFrom 'ecs-fargate-slaves'
                 cpu 256
                 memory 512
-                image 'jenkinsci/jnlp-slave'
+                image 'jenkins/inbound-agent'
             }
         }
         steps {
